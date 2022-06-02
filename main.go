@@ -9,5 +9,5 @@ func main() {
 
 	initRouter(r)
 
-	r.Run()
+	r.Run(":80")
 }
