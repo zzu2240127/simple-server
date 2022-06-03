@@ -29,7 +29,13 @@ func Add(c *gin.Context) {
 		Log.Println(err)
 	}
 	f.Close()
+
 	f, err = os.OpenFile("./public/pic/pic.xml", os.O_CREATE|os.O_APPEND|os.O_WRONLY|os.O_RDWR, 6060)
+
+	if err != nil {
+		Log.Println("打开pic.xml文件失败：", err)
+	}
+
 	var strings = []string{
 		"<photo>" + saveName + "</photo>",
 		"</pic>",
