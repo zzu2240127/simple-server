@@ -19,6 +19,11 @@ func initRouter(r *gin.Engine) {
 			"title": "Main website",
 		})
 	})
+	Router.GET("/upload/", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "upload.html", gin.H{
+			"title": "图片上传页面",
+		})
+	})
 
 	Router.POST("/add/", controller.Add)
 

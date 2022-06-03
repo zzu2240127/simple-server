@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片上传页面</title>
+</head>
+<body>
+<a>选择需要上传的图片，点击上传</a>
+
+<form action="/add/" method="post" enctype="multipart/form-data">
+  <div><input type="file" multiple="multiple" accept="image/*" name="image"></div>
+  <div><input type="submit" value="上传"></div>
+</form>
+</body>
+</html>
