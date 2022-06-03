@@ -9,5 +9,5 @@ func main() {
 
 	initRouter(r)
 
-	r.Run(":443")
+	r.Run(":80")
 }
