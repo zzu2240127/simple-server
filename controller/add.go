@@ -40,7 +40,10 @@ func Add(c *gin.Context) {
 		"<photo>" + saveName + "</photo>",
 		"</pic>",
 	}
-	addLine(f, strings)
+	err = addLine(f, strings)
+	if err != nil {
+		Log.Println("添加文档失败", err)
+	}
 	f.Close()
 	c.String(http.StatusOK, fmt.Sprintf("'%s' uploaded!", file.Filename))
 }
