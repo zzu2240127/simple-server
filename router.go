@@ -25,6 +25,12 @@ func initRouter(r *gin.Engine) {
 		})
 	})
 
+	Router.GET("/show/", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "show.html", gin.H{
+			"title": "所有图片显示页面",
+		})
+	})
+
 	Router.POST("/add/", controller.Add)
 
 	apiRouter := r.Group("/douyin")
